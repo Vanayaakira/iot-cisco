@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Smart Home - Cisco Packet Tracer Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-home"></i>
+                <span>IoT Smart Home</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#devices">Perangkat</a></li>
+                <li><a href="#configuration">Konfigurasi</a></li>
+                <li><a href="#control">Kontrol</a></li>
+                <li><a href="#results">Hasil</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">IoT Smart Home di Cisco Packet Tracer</h1>
+            <p class="hero-subtitle">Project Smart Home Sederhana menggunakan Internet of Things</p>
+            <div class="hero-animation">
+                <i class="fas fa-wifi animate-pulse"></i>
+                <i class="fas fa-mobile-alt animate-bounce"></i>
+                <i class="fas fa-lightbulb animate-glow"></i>
+                <i class="fas fa-fan animate-spin"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+            </div>
+            <div class="content-card">
+                <p>Pada proyek ini, dibuat sebuah simulasi <strong>Smart Home</strong> menggunakan aplikasi Cisco Packet Tracer dengan memanfaatkan fitur <strong>IoT (Internet of Things)</strong>. Tujuannya adalah untuk memahami bagaimana perangkat rumah tangga dapat saling terhubung dan dikontrol melalui jaringan.</p>
+                
+                <div class="image-container">
+                    <img src="prepare.jpg.png" alt="Topologi Awal" class="responsive-image">
+                    <div class="image-caption">Topologi awal tanpa koneksi ke Home Gateway</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Devices Section -->
+        <section id="devices" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-microchip"></i> 1. Perangkat yang Digunakan</h2>
+            </div>
+            <div class="content-card">
+                <p>Dalam simulasi ini digunakan beberapa perangkat IoT, yaitu:</p>
+                <div class="devices-grid">
+                    <div class="device-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Light (Lampu)</h3>
+                        <p>Dapat dinyalakan, dimatikan, atau diatur tingkat kecerahannya.</p>
+                    </div>
+                    <div class="device-card">
+                        <i class="fas fa-fan"></i>
+                        <h3>Ceiling Fan (Kipas Angin)</h3>
+                        <p>Dapat dikontrol dengan mode <em>Low</em> atau <em>High</em>.</p>
+                    </div>
+                    <div class="device-card">
+                        <i class="fas fa-door-open"></i>
+                        <h3>Door (Pintu)</h3>
+                        <p>Berfungsi sebagai akses masuk rumah yang dapat dipantau.</p>
+                    </div>
+                    <div class="device-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Motion Detector</h3>
+                        <p>Mendeteksi pergerakan untuk otomatisasi perangkat.</p>
+                    </div>
+                    <div class="device-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Smartphone</h3>
+                        <p>Digunakan untuk mengontrol seluruh perangkat melalui aplikasi <strong>IoT Monitor</strong>.</p>
+                    </div>
+                    <div class="device-card">
+                        <i class="fas fa-router"></i>
+                        <h3>Home Gateway (DLC100)</h3>
+                        <p>Penghubung utama antara perangkat IoT dengan jaringan nirkabel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Configuration Section -->
+        <section id="configuration" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-cog"></i> 2. Konfigurasi Jaringan</h2>
+            </div>
+            <div class="content-card">
+                <div class="config-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Rename HomeGateway</h3>
+                            <p>Click alat Home gateway lalu pergi ke config pada bagian <strong>Wireless</strong> setting ssid bebas contoh RafaHome.</p>
+                            <div class="image-container">
+                                <img src="sgma.jpg.png" alt="Setting Wireless Gateway" class="responsive-image">
+                                <div class="image-caption">Setting SSID pada Home Gateway</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Konfigurasi IoT Server</h3>
+                            <p>Pada menu konfigurasi masing-masing perangkat (lampu,fan,door, etc.), click alatnya lalu pergi ke pengaturan config lalu pada opsi <strong>IoT Server → Home Gateway</strong> diaktifkan agar perangkat terhubung ke home gateway.</p>
+                            <div class="image-container">
+                                <img src="settingiot.jpg.png" alt="Setting IoT Configuration" class="responsive-image">
+                                <div class="image-caption">Alat - config - global setting - scroll - pada box IoT server</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Koneksi WiFi Smartphone</h3>
+                            <p><strong>Smartphone</strong> juga dikonfigurasi agar terhubung ke jaringan WiFi (SSID: Rafahome).</p>
+                            <div class="image-container">
+                                <img src="rafasd.png" alt="Smartphone WiFi Connection" class="responsive-image">
+                                <div class="image-caption">Phone - config - Wireless</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Buka IoT Monitor</h3>
+                            <p>Setelah terhubung, buka aplikasi <strong>IoT Monitor</strong> pada smartphone.</p>
+                            <div class="image-container">
+                                <img src="p0o.jpg.png" alt="Phone IoT Monitor" class="responsive-image">
+                                <div class="image-caption">Aplikasi IoT Monitor pada smartphone</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Login ke IoT Monitor</h3>
+                            <p><strong>Smartphone</strong> Jika sudah di set maka ip akan terisi otomatis oleh dhcp maka tinggal click <strong>Login</strong>.</p>
+                            <div class="image-container">
+                                <img src="login.png" alt="Login IoT Monitor" class="responsive-image">
+                                <div class="image-caption">Login ke aplikasi IoT Monitor</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Control Section -->
+        <section id="control" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-gamepad"></i> 3. Kontrol dan Monitoring</h2>
+            </div>
+            <div class="content-card">
+                <div class="control-features">
+                    <div class="feature">
+                        <i class="fas fa-sliders-h"></i>
+                        <div class="feature-content">
+                            <h3>Kontrol Real-time</h3>
+                            <p>Dari <strong>IoT Monitor</strong>, pengguna dapat mengatur status perangkat (On/Off, Dim/High).</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-eye"></i>
+                        <div class="feature-content">
+                            <h3>Monitoring Sensor</h3>
+                            <p>Sensor gerak dan pintu bisa dipantau melalui aplikasi yang sama.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-magic"></i>
+                        <div class="feature-content">
+                            <h3>Otomatisasi</h3>
+                            <p>Contoh: Lampu bisa dinyalakan melalui smartphone, atau kipas angin bisa diatur kecepatannya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-trophy"></i> 4. Hasil Simulasi</h2>
+            </div>
+            <div class="content-card">
+                <p>Dengan konfigurasi ini, pengguna dapat:</p>
+                <div class="results-list">
+                    <div class="result-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mengontrol lampu dan kipas angin langsung dari smartphone</span>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Memantau kondisi pintu dan sensor gerak secara real-time</span>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Membuat kondisi otomatisasi, misalnya ketika sensor gerak mendeteksi pergerakan, lampu menyala otomatis</span>
+                    </div>
+                </div>
+                
+                <div class="image-container">
+                    <img src="hasil.jpg.png" alt="Final Result" class="responsive-image">
+                    <div class="image-caption success">✅ Hasil akhir: Test berhasil membuat fan berputar</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 IoT Smart Home Documentation. Created with <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
